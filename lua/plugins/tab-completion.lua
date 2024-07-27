@@ -37,5 +37,13 @@ return {
         end
       end, { "i", "s" }),
     })
+
+    opts.sources = cmp.config.sources({
+      { name = "supermaven" },
+      { name = "nvim_lsp" },
+      { name = "path" },
+    }, {
+      { name = "buffer" },
+    })
   end,
 }
