@@ -38,12 +38,18 @@ return {
       end, { "i", "s" }),
     })
 
-    opts.sources = cmp.config.sources({
-      { name = "supermaven" },
-      { name = "nvim_lsp" },
-      { name = "path" },
-    }, {
-      { name = "buffer" },
+    -- opts.sources = cmp.config.sources({
+    --   { name = "supermaven" },
+    --   { name = "nvim_lsp" },
+    --   { name = "path" },
+    -- }, {
+    --   { name = "buffer" },
+    -- })
+
+    table.insert(opts.sources, 1, {
+      name = "supermaven",
+      group_index = 1,
+      priority = 100,
     })
   end,
 }
